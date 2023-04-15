@@ -7,6 +7,16 @@ modified: '2022-09-02T13:03:16.558Z'
 
 # 求MEX
 ```cpp
+ll mmex(ll v[])
+{
+    bitset<200010> vis;
+    vis.set();
+    for (int i = 1; i <= n; i++)
+        if (v[i] <= n)
+            vis[v[i]] = 0;
+    return vis._Find_first();
+}
+
 const int N=200010;
 int a[N];
 int ct[N];
